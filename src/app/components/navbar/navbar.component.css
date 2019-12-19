@@ -1,0 +1,11 @@
+a {
+    font-family: tahoma;
+    color: white;
+    font-size: 16px
+   
+}
+
+a:hover {
+    font-family: tahoma;
+    color: rgb(46, 168, 54);
+}

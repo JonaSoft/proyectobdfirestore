@@ -1,0 +1,7 @@
+{
+    "/v0/b/proyectobd-85f2c.appspot.com/*": {
+        "target": "https://firebasestorage.googleapis.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

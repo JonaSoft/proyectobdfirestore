@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container-fluid m-auto animated fast fadeIn fondomain">
+    <div class="row">
+
+        <div class="container-fluid col-md-3 col-sm-12 ">
+            <div class="col-md-12 col-sm-12 menu" style="margin-top:20%;">
+
+                <ul class="list-group list-group-vertical text-center p-3">
+
+                    <br>
+                    <br>
+                    <a (click)="newFicha()" class="list-group-item  list-group-item-action text-left itemfondo">
+                        <img src="../../../assets/imagen/Nuevo cliente.png" title="Crear un nuevo registro" width="30"> Nuevo Cliente</a>
+                    <a (click)="cargarImagenes()" class="list-group-item list-group-item-action list-group-item-secondary text-left  text-black">
+                        <img src="../../../assets/imagen/subir.png" title="Alojar un archivo en el Servidor" width="30"> Subir Archivo </a>
+                    <a (click)="cargajson()" class="list-group-item list-group-item-action text-left itemfondo">
+                        <img src="../../../assets/imagen/importar.png" title="Descargar archivo al sitio web" width="30"> Descargar Datos</a>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class=" col-md-9 col-sm-12 ">
+            <app-loading *ngIf="loading" class="m-auto"></app-loading>
+            <app-importar *ngIf="mostrarimportar" class=" animated fast fadeIn"></app-importar>
+            <!--<app-addcliente *ngIf="mostrarfichaadd" class=" animated fast fadeIn "> </app-addcliente>-->
+            <div *ngIf="mostrartablaimportar" class="container-fluid tabla mt-25  animated fast fadeIn">
+                <table>
+                    <thead>
+                        <th>Items Importados...</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of nuevos;let i = index;">
+                            <td scope="row"> {{i+1}}</td>
+                            <td class="text-large">{{item.ruc}}</td>
+                            <td>{{item.ncomercial}}</td>
+                            <td>{{item.plazoclie}}</td>
+                            <td>{{item.tipocon}}</td>
+                            <td>{{item.estadocon}}</td>
+                            <td>{{item.direccion}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

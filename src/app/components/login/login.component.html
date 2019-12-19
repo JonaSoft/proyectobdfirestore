@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6" style="background:black;opacity:0.95; margin-top:20%;height:auto;">
+
+            <div class="container-fluid text-center text-white mt-2 ">
+                <h3> MS COMERCIAL </h3>
+
+            </div>
+
+            <div class="container formulario">
+                <!-- action="javascript:;" method="post"-->
+                <form id="login-form" (submit)="login()">
+                    <div class="container form-group">
+
+                        <input type="email" class="form-control badge-dark" id="email" placeholder="Ingrese Usuario" name="email" [(ngModel)]="email">
+
+                    </div>
+                    <div class="container form-group">
+                        <input type="password" class="form-control badge-dark" id="password" placeholder="Password" name="password" [(ngModel)]="password">
+                    </div>
+                    <div *ngIf='alerta' class="forget-container">
+                        <!--<p class="forget-psw">WARNING...!!!</p><hr>-->
+                        <p class="text-danger">Sin Credenciales. Sin Autorización...!!!</p>
+                    </div>
+                    <div class="container form-group mt-3">
+                        <button type="submit" name="submit" id="login" class="btn btn-success">Acceder</button>
+                        <br>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</div>
