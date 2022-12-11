@@ -26,7 +26,7 @@
         "@angular/router": "~7.2.0",
         "array-move-item": "^1.0.0",
         "core-js": "^2.5.4",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "file-saver": "^2.0.2",
         "file-system": "^2.2.2",
         "firebase": "^6.1.0",
